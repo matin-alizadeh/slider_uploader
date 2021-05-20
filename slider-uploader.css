@@ -85,6 +85,11 @@ strong {
 
 /* Custom Slider Uplodaer */
 
+.slider-uploader {
+    width: 800px;
+    margin: 30px auto;
+}
+
 .slider-uploader-nav {
   display: flex;
   justify-content: space-between;
@@ -124,7 +129,7 @@ button.slider-uploader-back-btn {
 }
 .tooltip .tooltip-text {
   position: absolute;
-  left: -7px;
+  left: -12px;
   top: -22px;
   width: 50px;
   text-align: center;
@@ -135,6 +140,7 @@ button.slider-uploader-back-btn {
   color: #f5f5f5;
   box-shadow: 0 0 4px 1px #eee;
   opacity: 0;
+  transition: all 0.3s;
 }
 .tooltip-text:after {
   content: "";
@@ -148,5 +154,34 @@ button.slider-uploader-back-btn {
 }
 .tooltip:hover .tooltip-text {
   opacity: 1;
-  transition: all 0.6s;
+}
+.tooltip:hover svg{
+    stroke: #2196f3;
+}
+#su-upload-btn{
+    cursor: pointer;
+}
+.su-text{
+    color: #aaa;
+}
+#su-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.su-slide{
+    position: relative;
+}
+.su-slide img{
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+}
+.su-slide button{
+    border-radius: 50px;
+    background-color: #2196f38a;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
 }
