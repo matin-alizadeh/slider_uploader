@@ -3,82 +3,150 @@
 /*Embed Fonts*/
 
 @font-face {
-    font-family: isans;
-    font-style: normal;
-    font-weight: bold;
-    src: url('fonts/eot/IRANSansWeb_Bold.eot');
-    src: url('fonts/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('fonts/woff2/IRANSansWeb_Bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('fonts/woff/IRANSansWeb_Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('fonts/ttf/IRANSansWeb_Bold.ttf') format('truetype');
+  font-family: isans;
+  font-style: normal;
+  font-weight: bold;
+  src: url("fonts/eot/IRANSansWeb_Bold.eot");
+  src: url("fonts/eot/IRANSansWeb_Bold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-8 */ url("fonts/woff2/IRANSansWeb_Bold.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("fonts/woff/IRANSansWeb_Bold.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("fonts/ttf/IRANSansWeb_Bold.ttf")
+      format("truetype");
 }
 
 @font-face {
-    font-family: isans;
-    font-style: normal;
-    font-weight: 500;
-    src: url('fonts/eot/IRANSansWeb_Medium.eot');
-    src: url('fonts/eot/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('fonts/woff2/IRANSansWeb_Medium.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('fonts/woff/IRANSansWeb_Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('fonts/ttf/IRANSansWeb_Medium.ttf') format('truetype');
+  font-family: isans;
+  font-style: normal;
+  font-weight: 500;
+  src: url("fonts/eot/IRANSansWeb_Medium.eot");
+  src: url("fonts/eot/IRANSansWeb_Medium.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */ url("fonts/woff2/IRANSansWeb_Medium.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("fonts/woff/IRANSansWeb_Medium.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("fonts/ttf/IRANSansWeb_Medium.ttf")
+      format("truetype");
 }
 
 @font-face {
-    font-family: isans;
-    font-style: normal;
-    font-weight: 300;
-    src: url('fonts/eot/IRANSansWeb_Light.eot');
-    src: url('fonts/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('fonts/woff2/IRANSansWeb_Light.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('fonts/woff/IRANSansWeb_Light.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('fonts/ttf/IRANSansWeb_Light.ttf') format('truetype');
+  font-family: isans;
+  font-style: normal;
+  font-weight: 300;
+  src: url("fonts/eot/IRANSansWeb_Light.eot");
+  src: url("fonts/eot/IRANSansWeb_Light.eot?#iefix") format("embedded-opentype"),
+    /* IE6-8 */ url("fonts/woff2/IRANSansWeb_Light.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("fonts/woff/IRANSansWeb_Light.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("fonts/ttf/IRANSansWeb_Light.ttf")
+      format("truetype");
 }
 
 @font-face {
-    font-family: isans;
-    font-style: normal;
-    font-weight: 200;
-    src: url('fonts/eot/IRANSansWeb_UltraLight.eot');
-    src: url('fonts/eot/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('fonts/woff2/IRANSansWeb_UltraLight.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('fonts/woff/IRANSansWeb_UltraLight.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('fonts/ttf/IRANSansWeb_UltraLight.ttf') format('truetype');
+  font-family: isans;
+  font-style: normal;
+  font-weight: 200;
+  src: url("fonts/eot/IRANSansWeb_UltraLight.eot");
+  src: url("fonts/eot/IRANSansWeb_UltraLight.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */ url("fonts/woff2/IRANSansWeb_UltraLight.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("fonts/woff/IRANSansWeb_UltraLight.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("fonts/ttf/IRANSansWeb_UltraLight.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: isans;
-    font-style: normal;
-    font-weight: normal;
-    src: url('fonts/eot/IRANSansWeb.eot');
-    src: url('fonts/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('fonts/woff2/IRANSansWeb.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('fonts/woff/IRANSansWeb.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('fonts/ttf/IRANSansWeb.ttf') format('truetype');
+  font-family: isans;
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/eot/IRANSansWeb.eot");
+  src: url("fonts/eot/IRANSansWeb.eot?#iefix") format("embedded-opentype"),
+    /* IE6-8 */ url("fonts/woff2/IRANSansWeb.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("fonts/woff/IRANSansWeb.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("fonts/ttf/IRANSansWeb.ttf")
+      format("truetype");
 }
 
 /* General Sider Uploader */
 
-body, h1, h2, h3, h4, h5, h6, p, strong{
-    font-family: isans;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+strong {
+  font-family: isans;
 }
 
-
-/* Custom Slider Uplodaer */ 
+/* Custom Slider Uplodaer */
 
 .slider-uploader-nav {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .slider-uploader-title {
-    display: flex;
-    align-items: center;
-    font-size: 17px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
 }
 
 button.slider-uploader-back-btn {
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 0 10px 0 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0 10px 0 0;
 }
 
 .slider-uploader-submit-btn button {
-    cursor: pointer;
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    padding: 8px 15px;
-    background-color: #2196F3;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 15px;
+  background-color: #2196f3;
 }
 
 .slider-uploader-submit-btn button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Add photo Styles */
+.tooltip {
+  position: relative;
+  display: inline-flex;
+}
+.tooltip .tooltip-text {
+  position: absolute;
+  left: -7px;
+  top: -22px;
+  width: 50px;
+  text-align: center;
+  font-size: 10px;
+  border-radius: 4px;
+  padding: 3px 5px;
+  background-color: #000;
+  color: #f5f5f5;
+  box-shadow: 0 0 4px 1px #eee;
+  opacity: 0;
+}
+.tooltip-text:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+.tooltip:hover .tooltip-text {
+  opacity: 1;
+  transition: all 0.6s;
 }
