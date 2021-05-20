@@ -151,7 +151,8 @@ button.slider-uploader-back-btn {
   transition: all 0.6s;
 }
 /* Pictures */
-.photo {
+.photo,
+.pictures {
   display: inline-flex;
   position: relative;
 }
@@ -172,5 +173,17 @@ button.slider-uploader-back-btn {
   text-align: center;
   color: #fff;
   background-color: #01a2ff;
+  cursor: pointer;
+}
+.edit-button {
+  min-width: 40px;
+  color: rgb(144, 154, 170);
+  background-color: rgb(241, 242, 244);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  margin-right: 6px;
+  border-radius: 6px;
   cursor: pointer;
 }
