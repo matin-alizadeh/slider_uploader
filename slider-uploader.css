@@ -150,3 +150,27 @@ button.slider-uploader-back-btn {
   opacity: 1;
   transition: all 0.6s;
 }
+/* Pictures */
+.photo {
+  display: inline-flex;
+  position: relative;
+}
+.photo img {
+  max-width: 150px;
+  min-height: 150px;
+  border-radius: 6px;
+  margin-right: 6px;
+}
+.photo .close {
+  position: absolute;
+  content: "x";
+  right: 10px;
+  top: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  background-color: #01a2ff;
+  cursor: pointer;
+}
