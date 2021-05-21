@@ -155,6 +155,7 @@ button.slider-uploader-back-btn {
 .tooltip:hover .tooltip-text {
   opacity: 1;
 }
+
 .tooltip:hover svg{
     stroke: #2196f3;
 }
