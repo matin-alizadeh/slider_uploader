@@ -86,8 +86,8 @@ strong {
 /* Custom Slider Uplodaer */
 
 .slider-uploader {
-    width: 800px;
-    margin: 30px auto;
+  width: 800px;
+  margin: 30px auto;
 }
 
 .slider-uploader-nav {
@@ -156,33 +156,64 @@ button.slider-uploader-back-btn {
   opacity: 1;
 }
 
-.tooltip:hover svg{
-    stroke: #2196f3;
+.tooltip:hover svg {
+  stroke: #2196f3;
 }
-#su-upload-btn{
-    cursor: pointer;
+#su-upload-btn {
+  cursor: pointer;
 }
-.su-text{
-    color: #aaa;
+.su-text {
+  color: #aaa;
 }
-#su-content{
-    display: flex;
-    flex-wrap: wrap;
+#su-content {
+  display: flex;
+  flex-wrap: wrap;
 }
-.su-slide{
-    position: relative;
+.su-slide {
+  position: relative;
+  margin-right: 7px;
 }
-.su-slide img{
-    width: 150px;
-    height: 150px;
-    border-radius: 5px;
+.su-slide img {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
 }
-.su-slide button{
-    border-radius: 50px;
-    background-color: #2196f38a;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    right: 5px;
-    top: 5px;
+.su-slide button.su-remove-btn {
+  border-radius: 50px;
+  background-color: #2196f38a;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+/** Order-Mode **/
+.su-slide.order-mode img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px 5px 0 0;
+}
+.circle__order-mode {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(10%, -25%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: #888;
+  opacity: 0.6;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+.order-btn__order-mode {
+  display: block;
+  width: 100%;
+  padding: 15px 0 10px;
+  background-color: #e7e7e7;
+  color: #bdbdbd;
+  margin-top: -10px;
+  border: none;
+  border-radius: 0 0 5px 5px;
+  cursor: pointer;
 }
