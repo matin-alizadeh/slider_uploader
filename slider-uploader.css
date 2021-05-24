@@ -177,6 +177,9 @@ button.slider-uploader-back-btn {
   width: 150px;
   height: 150px;
   border-radius: 5px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .su-slide button.su-remove-btn {
   border-radius: 50px;
@@ -188,6 +191,19 @@ button.slider-uploader-back-btn {
   top: 5px;
 }
 /** Order-Mode **/
+.su-content-btn{
+  margin-right: 10px;
+}
+.su-content-btn button{
+  width: 50px;
+  height: 100%;
+  border: none;
+  font-size: 25px;
+  color: #aaa;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 5px;
+}
 .su-slide.order-mode img {
   width: 100px;
   height: 100px;
