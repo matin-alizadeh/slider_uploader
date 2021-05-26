@@ -84,6 +84,9 @@ strong {
 }
 
 /* Custom Slider Uplodaer */
+.hide{
+  display: none;
+}
 
 .slider-uploader {
   width: 800px;

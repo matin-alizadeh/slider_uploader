@@ -48,7 +48,7 @@ function handleUploadedSlide(e){
     if(image){
         let su_text = document.querySelector("#su-content .su-text")
         if(su_text){
-            su_text.remove();
+            su_text.classList.add("hide");
         }
         let img = `
         <div class="su-slide">
@@ -64,6 +64,7 @@ function handleUploadedSlide(e){
         `
         sliderContainer.insertAdjacentHTML("beforeend",img)
         postBtn.disabled = false
+        removeOrderBtn()
         addContentButtons()
     }
 }
@@ -83,6 +84,9 @@ function removeSlide(target, el){
     let slides = document.querySelectorAll(".su-slide")
     if(!slides[0]){
         postBtn.disabled = true
+        removeContentButtons()
+        document.querySelector("#su-content .su-text").classList.remove("hide")
+        isFirstTime = true
     }
 
 }
@@ -105,26 +109,44 @@ function addContentButtons(){
     isFirstTime = false;
 }
 
+function removeContentButtons(){
+    const btns = document.querySelectorAll(".su-content-btn")
+    btns.forEach(btn => btn.remove())
+}
+
 function handleOrderBtn(){
+    let isThere = document.querySelector(".order-btn__order-mode") != null
+    if(!isThere){
+        let slides = document.querySelectorAll("#su-content .su-slide")
+        const orderButtons = `
+        <span class="circle__order-mode"></span>
+        <button type="button" class="order-btn__order-mode">
+            <svg width="30" height="20" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                <rect id="svg_1" height="5" width="5" y="3" x="20" fill="#999999"/>
+                <rect id="svg_2" height="5" width="5" y="3" x="12" fill="#999999"/>
+                <rect id="svg_3" height="5" width="5" y="11.5" x="4" fill="#999999"/>
+                <rect id="svg_4" height="5" width="5" y="3" x="4" fill="#999999"/>
+                <rect id="svg_5" height="5" width="5" y="11.5" x="20" fill="#999999"/>
+                <rect id="svg_6" height="5" width="5" y="11.5" x="12" fill="#999999"/>
+                <rect id="svg_7" height="14" width="5" y="44" x="5" fill="#999999"/>
+                </g>
+            </svg>
+        </button>
+        `
+        slides.forEach(slide => {
+            slide.classList.add("order-mode")
+            slide.insertAdjacentHTML("beforeend",orderButtons)
+        })
+    }
+}
+
+function removeOrderBtn(){
+    let spans = document.querySelectorAll(".circle__order-mode")
+    let btns = document.querySelectorAll(".order-btn__order-mode")
     let slides = document.querySelectorAll("#su-content .su-slide")
-    const orderButtons = `
-    <span class="circle__order-mode"></span>
-    <button class="order-btn__order-mode">
-        <svg width="30" height="20" xmlns="http://www.w3.org/2000/svg">
-            <g>
-            <rect id="svg_1" height="5" width="5" y="3" x="20" fill="#999999"/>
-            <rect id="svg_2" height="5" width="5" y="3" x="12" fill="#999999"/>
-            <rect id="svg_3" height="5" width="5" y="11.5" x="4" fill="#999999"/>
-            <rect id="svg_4" height="5" width="5" y="3" x="4" fill="#999999"/>
-            <rect id="svg_5" height="5" width="5" y="11.5" x="20" fill="#999999"/>
-            <rect id="svg_6" height="5" width="5" y="11.5" x="12" fill="#999999"/>
-            <rect id="svg_7" height="14" width="5" y="44" x="5" fill="#999999"/>
-            </g>
-        </svg>
-    </button>
-    `
-    slides.forEach(slide => {
-        slide.classList.add("order-mode")
-        slide.insertAdjacentHTML("beforeend",orderButtons)
-    })
+
+    spans.forEach(span => span.remove())
+    btns.forEach(btn => btn.remove())
+    slides.forEach(slide => slide.classList.remove("order-mode"))
 }
