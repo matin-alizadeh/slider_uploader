@@ -138,6 +138,15 @@ function handleOrderBtn(){
             slide.classList.add("order-mode")
             slide.insertAdjacentHTML("beforeend",orderButtons)
         })
+    }else{
+        let spans = document.querySelectorAll(".circle__order-mode")
+        spans.forEach(span => span.remove())
+
+        let buttons = document.querySelectorAll(".order-btn__order-mode")
+        buttons.forEach(btn => btn.remove())
+
+        let slides = document.querySelectorAll("#su-content .su-slide")
+        slides.forEach(slide => slide.classList.remove("order-mode"))
     }
 }
 
