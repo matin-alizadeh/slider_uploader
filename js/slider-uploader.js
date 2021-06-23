@@ -1,14 +1,16 @@
 // Variables
 
 let uploadSlideBtn = document.querySelector("#su-upload-btn")
-let slideInput = document.querySelector("#su-input-slide")
+let slideInput = document.querySelector(".su-input-slide:last-child")
 let sliderContainer = document.querySelector("#su-content .su-slider-container")
 let postBtn = document.querySelector(".slider-uploader-submit-btn button")
 let isFirstTime = true
+let currentSlide = 1
 
 // Event Listeners
 
 uploadSlideBtn.addEventListener("click",() => {
+    generateNewInput()
     slideInput.click();
 })
 slideInput.addEventListener("change",handleUploadedSlide)
@@ -32,6 +34,7 @@ document.addEventListener("click",e => {
 
     // su-add-btn
     if(e.target.id == "su-add-btn"){
+        generateNewInput()
         slideInput.click()
     }
 
@@ -47,6 +50,11 @@ document.addEventListener("click",e => {
 
 // Methods
 
+function generateNewInput(){
+    slideInput = document.querySelector(".su-input-slide:last-child")
+    slideInput.addEventListener("change",handleUploadedSlide)
+}
+
 function handleUploadedSlide(e){
     const [image] = slideInput.files
     if(image){
@@ -55,7 +63,7 @@ function handleUploadedSlide(e){
             su_text.classList.add("hide");
         }
         let img = `
-        <div class="su-slide">
+        <div class="su-slide" data-su-slide="slide${currentSlide}">
             <img style="background-image: url('${URL.createObjectURL(image)}')" />
             <button type="button" class="su-remove-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -66,25 +74,36 @@ function handleUploadedSlide(e){
             </button>
         </div>
         `
+        currentSlide++
         sliderContainer.insertAdjacentHTML("beforeend",img)
         postBtn.disabled = false
+        let input = `<input type="file" name="slide${currentSlide}" class="su-input-slide" hidden>`
+        let su_content = document.querySelector("#su-content")
+        su_content.insertAdjacentHTML("beforeend",input)
         removeOrderBtn()
         addContentButtons()
     }
 }
 
 function removeSlide(target, el){
+    let slideNumber = ""
     switch(el){
         case "button":
+            slideNumber = target.parentElement.dataset.suSlide
             target.parentElement.remove()
             break;
         case "svg":
+            slideNumber = target.parentElement.parentElement.dataset.suSlide
             target.parentElement.parentElement.remove()
             break;
         case "line":
+            slideNumber = target.parentElement.parentElement.parentElement.dataset.suSlide
             target.parentElement.parentElement.parentElement.remove()
             break;
     }
+
+    document.querySelector(`.su-input-slide[name=${slideNumber}]`).remove()
+
     let slides = document.querySelectorAll(".su-slide")
     if(!slides[0]){
         postBtn.disabled = true
@@ -144,7 +163,10 @@ function handleOrderBtn(){
         })
         
         sortable = new Sortable(document.getElementById('su-ordering'), {
-            disabled: false
+            disabled: false,
+            onSort: function(e){
+                
+            }
         });
 
     }else{
@@ -169,5 +191,7 @@ function removeOrderBtn(){
     spans.forEach(span => span.remove())
     btns.forEach(btn => btn.remove())
     slides.forEach(slide => slide.classList.remove("order-mode"))
+    if(typeof sortable !== "undefined")
+        sortable.options.disabled = true
 }
 
