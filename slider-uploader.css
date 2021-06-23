@@ -241,6 +241,10 @@ button.slider-uploader-back-btn {
   border-radius: 0 0 5px 5px;
   cursor: move;
 }
+.su-slider-container{
+  display: flex;
+  flex-wrap: wrap;
+}
 
 /*  Keyframes */
 @keyframes ordering {

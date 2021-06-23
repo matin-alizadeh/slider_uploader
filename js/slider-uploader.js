@@ -2,7 +2,7 @@
 
 let uploadSlideBtn = document.querySelector("#su-upload-btn")
 let slideInput = document.querySelector("#su-input-slide")
-let sliderContainer = document.querySelector("#su-content")
+let sliderContainer = document.querySelector("#su-content .su-slider-container")
 let postBtn = document.querySelector(".slider-uploader-submit-btn button")
 let isFirstTime = true
 
@@ -40,6 +40,10 @@ document.addEventListener("click",e => {
         handleOrderBtn()
     }
 })
+
+// Library
+
+
 
 // Methods
 
@@ -138,6 +142,11 @@ function handleOrderBtn(){
             slide.classList.add("order-mode")
             slide.insertAdjacentHTML("beforeend",orderButtons)
         })
+        
+        sortable = new Sortable(document.getElementById('su-ordering'), {
+            disabled: false
+        });
+
     }else{
         let spans = document.querySelectorAll(".circle__order-mode")
         spans.forEach(span => span.remove())
@@ -147,6 +156,8 @@ function handleOrderBtn(){
 
         let slides = document.querySelectorAll("#su-content .su-slide")
         slides.forEach(slide => slide.classList.remove("order-mode"))
+
+        sortable.options.disabled = true
     }
 }
 
@@ -159,3 +170,4 @@ function removeOrderBtn(){
     btns.forEach(btn => btn.remove())
     slides.forEach(slide => slide.classList.remove("order-mode"))
 }
+
