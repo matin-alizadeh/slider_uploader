@@ -14,6 +14,7 @@ uploadSlideBtn.addEventListener("click",() => {
     slideInput.click();
 })
 slideInput.addEventListener("change",handleUploadedSlide)
+postBtn.addEventListener("click",handleSubmitForm)
 document.addEventListener("click",e => {
 
     // remove slide btn
@@ -164,9 +165,7 @@ function handleOrderBtn(){
         
         sortable = new Sortable(document.getElementById('su-ordering'), {
             disabled: false,
-            onSort: function(e){
-                
-            }
+            handle: ".order-btn__order-mode, .circle__order-mode",
         });
 
     }else{
@@ -195,3 +194,20 @@ function removeOrderBtn(){
         sortable.options.disabled = true
 }
 
+function handleSubmitForm(e){
+    e.preventDefault()
+    document.querySelector(".su-input-slide:last-child").remove() // Remove last empty input
+
+    let slides = document.querySelectorAll(".su-slide")
+    let slideNumber = ""
+    let input = ""
+    let counter = 1
+    slides.forEach(slide => {
+        slideNumber = slide.dataset.suSlide
+        input = document.querySelector(`input[name=${slideNumber}]`)
+        input.setAttribute("name",`su${counter}`)
+        counter++
+    })
+
+    document.getElementById("su-form").submit()
+}
